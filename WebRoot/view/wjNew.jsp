@@ -79,8 +79,8 @@ function cancel(){
 						是否共享结果：
 					</td>
 					<td>
-						是<input name="anonymousFlag" type="radio" value="1" checked/>&nbsp;&nbsp;
-                                                                否<input name="anonymousFlag" type="radio" value="0" />
+						是<input name="shareFlag" type="radio" value="1" checked/>&nbsp;&nbsp;
+                                                                否<input name="shareFlag" type="radio" value="0" />
 					</td>
 				</tr>
 				<tr>

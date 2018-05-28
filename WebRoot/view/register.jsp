@@ -96,12 +96,15 @@
                 	<a href="teamList.jsp">查看团队列表</a>
                 </TD>
               </TR>
-              <TR height=40>
-                <TD>身　份：</TD>
-                <TD>
-                  <INPUT class=textbox id=txtTeamname name=teamname>
-                </TD>
-              </TR>
+				<tr>
+					<td height="40">
+						选择身份：
+					</td>
+					<td>
+						用户<input name="role" type="radio" value="2" checked/>&nbsp;&nbsp;
+                       	 管理员<input name="role" type="radio" value="1" />
+					</td>
+				</tr>
               <TR height=40  align=center >
                 <TD colspan ="2">
                   <INPUT class=btnLogin id=btnRegister type=button value="注     册" name=btnRegister onclick="javascript:OK_onClick()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

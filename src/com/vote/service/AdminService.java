@@ -79,7 +79,7 @@ public class AdminService {
 		return admin;
 	}
 	
-	public boolean register(String username,String password,String teamname) throws Exception {
+	public boolean register(String username,String password,String teamname,int role) throws Exception {
 		
 		DBConnection db = new DBConnection();
 		Connection con=null;
@@ -91,12 +91,13 @@ public class AdminService {
 		
 		try {
 			con = db.getConnection();
-			sql = "insert into wj_admins(username,password,team) values(?,?,?)";
+			sql = "insert into wj_admins(username,password,team,role) values(?,?,?,?)";
 			System.out.println(sql);
 			stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			stmt.setString(1, username);
 			stmt.setString(2, md5Psw);
 			stmt.setString(3, teamname);
+			stmt.setInt(4, role);
 			
 			stmt.executeUpdate();
 			rs = stmt.getGeneratedKeys();
@@ -122,6 +123,7 @@ public class AdminService {
 		int num = Integer.parseInt(numOfTeam);
 		String s = String.valueOf(num);
 		String md5Psw = MD5Util.MD5Encrypt(password);
+		int role = 1;
 		
 		try {
 			for(int i = 1; i<num+1; i++){
@@ -130,12 +132,13 @@ public class AdminService {
 				username = defUsername + i;
 				password = defPassword + i;
 				md5Psw = MD5Util.MD5Encrypt(password);
-				sql = "insert into wj_admins(username,password,team) values(?,?,?)";
+				sql = "insert into wj_admins(username,password,team,role) values(?,?,?,?)";
 				System.out.println(sql);
 				stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 				stmt.setString(1, username);
 				stmt.setString(2, md5Psw);
 				stmt.setString(3, teamname);
+				stmt.setInt(4, role);
 				
 				stmt.executeUpdate();
 				rs = stmt.getGeneratedKeys();

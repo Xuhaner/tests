@@ -5,7 +5,15 @@ public class AdminBean {
 	private String password;
 	private String team;
 	private int id;
+	private int role;
 	
+	
+	public int getRole(){
+		return role;
+	}
+	public void setRole(int role){
+		this.role = role;
+	}
 	
 	public void setId(int id){
 		this.id = id;

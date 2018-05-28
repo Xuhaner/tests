@@ -92,8 +92,8 @@ function cancel(){
 						是否匿名：
 					</td>
 					<td>
-						是<input name="anonymousFlag" type="radio" value="1" <%if("1".equals(Func.getString(ob.getAnonymousFlag()))){%>checked<%}%> <%=isReadOnly%>/>&nbsp;&nbsp;
-                                                                否<input name="anonymousFlag" type="radio" value="0" <%if("0".equals(Func.getString(ob.getAnonymousFlag()))){%>checked<%}%> <%=isReadOnly%>/>
+						是<input name="anonymousFlag" type="radio" value="1" <%if("1".equals(Func.getString(ob.getShareFlag()))){%>checked<%}%> <%=isReadOnly%>/>&nbsp;&nbsp;
+                                                                否<input name="anonymousFlag" type="radio" value="0" <%if("0".equals(Func.getString(ob.getShareFlag()))){%>checked<%}%> <%=isReadOnly%>/>
 					</td>
 				</tr>
 				<tr>

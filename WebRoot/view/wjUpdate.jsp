@@ -82,11 +82,11 @@
 				</tr>
 				<tr>
 					<td height="30" align="right">
-						是否匿名：
+						是否分享结果：
 					</td>
 					<td>
-						是<input name="anonymousFlag" type="radio" value="1" <%if("1".equals(ob.getAnonymousFlag())){%>checked<%}%>/>&nbsp;&nbsp;
-                                                                否<input name="anonymousFlag" type="radio" value="0" <%if("0".equals(ob.getAnonymousFlag())){%>checked<%}%>/>
+						是<input name="shareFlag" type="radio" value="1" <%if("1".equals(ob.getShareFlag())){%>checked<%}%>/>&nbsp;&nbsp;
+                                                                否<input name="shareFlag" type="radio" value="0" <%if("0".equals(ob.getShareFlag())){%>checked<%}%>/>
 					</td>
 				</tr>
 				<tr>

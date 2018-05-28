@@ -9,14 +9,14 @@
 	int oid = Integer.parseInt(getid.trim());
 	String title = request.getParameter("title");
 	String discribe = request.getParameter("discribe");
-	String anonymousFlag = request.getParameter("anonymousFlag");
+	String shareFlag = request.getParameter("shareFlag");
 	String remark = request.getParameter("remark");
 	String team = request.getParameter("team");
 	
 	bean.setOid(oid);
 	bean.setTitle(title);
 	bean.setDiscribe(discribe);
-	bean.setAnonymousFlag(anonymousFlag);
+	bean.setShareFlag(shareFlag);
 	bean.setRemark(remark);
 	bean.setTeam(team);
 	

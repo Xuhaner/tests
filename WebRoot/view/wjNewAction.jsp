@@ -8,14 +8,14 @@
 	ObjectBean ob = new ObjectBean();
 	String title = request.getParameter("title");
 	String discribe = request.getParameter("discribe");
-	String anonymousFlag = request.getParameter("anonymousFlag");
+	String shareFlag = request.getParameter("shareFlag");
 	String remark = request.getParameter("remark");
 	String team = request.getParameter("team");
 	String author = request.getParameter("createUser");
 	
 	ob.setTitle(title);
 	ob.setDiscribe(discribe);
-	ob.setAnonymousFlag(anonymousFlag);
+	ob.setShareFlag(shareFlag);
 	ob.setRemark(remark);
 	ob.setTeam(team);
 	ob.setAuthor(author);
